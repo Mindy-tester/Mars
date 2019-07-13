@@ -146,8 +146,7 @@ namespace MarsFramework.Pages
                         Global.GlobalDefinitions.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
                         updSkillObj.SkillShare();
                         Base.Test.Log(LogStatus.Info, "Skill Updated");
-
-                        return;
+                         return;
                     }
                 }
                 //click next page
