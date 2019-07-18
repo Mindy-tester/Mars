@@ -131,6 +131,7 @@
     <Compile Include="Global\Base.cs" />
     <Compile Include="Global\GlobalDefinitions.cs" />
     <Compile Include="Pages\ManageListingsPage.cs" />
+    <Compile Include="Pages\ManageRequestsPage.cs" />
     <Compile Include="Pages\SignIn.cs" />
     <Compile Include="Pages\SignUp.cs" />
     <Compile Include="Pages\Profile.cs" />

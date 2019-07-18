@@ -50,6 +50,14 @@ namespace MarsFramework
                 ManageListingsPage updateSkillObj = new ManageListingsPage();
                 updateSkillObj.UpdatedListing();
             }
+            [Test]
+            public void ManageRequests()
+            {
+                ManageRequestsPage manageRequest = new ManageRequestsPage();
+                manageRequest.Requests();
+
+            }
+
 
         }
     }
