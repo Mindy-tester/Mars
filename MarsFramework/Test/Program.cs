@@ -54,9 +54,19 @@ namespace MarsFramework
             public void ManageRequests()
             {
                 ManageRequestsPage manageRequest = new ManageRequestsPage();
-                manageRequest.Requests();
+                //manageRequest.Requests();
+                //manageRequest.SearchSkills();
 
             }
+            [Test]
+
+            public void SearchSkill()
+            {
+                ManageRequestsPage searchSkillObj = new ManageRequestsPage();
+                searchSkillObj.SearchSkills();
+            }
+
+                
 
 
         }
