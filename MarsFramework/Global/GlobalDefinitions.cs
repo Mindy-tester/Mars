@@ -15,6 +15,7 @@ namespace MarsFramework.Global
     {
         //Initialise the browser
         public static IWebDriver driver { get; set; }
+      
 
         #region WaitforElement 
 

@@ -1,4 +1,5 @@
 ﻿using MarsFramework.Global;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using RelevantCodes.ExtentReports;
@@ -98,6 +99,8 @@ namespace MarsFramework.Pages
         }
         public void ValidatedDeletedSkills()
         {
+
+            manageListing.Click();
             //Populate data from Excel
             GlobalDefinitions.ExcelLib.PopulateInCollection(Base.ExcelPath, "SkillShare");
                        
@@ -111,7 +114,7 @@ namespace MarsFramework.Pages
                     {
                         var titleObj = Global.GlobalDefinitions.driver.FindElement(By.XPath("//*[@id='listing-management-section']/div[2]/div[1]/table/tbody/tr[" + j + "]/td[3]")).Text;
                         var categoryObj = Global.GlobalDefinitions.driver.FindElement(By.XPath("//*[@id='listing-management-section']/div[2]/div[1]/table/tbody/tr[" + j + "]/td[2]")).Text;
-
+                                                
                         if (titleObj == "testing" && categoryObj == "Programming & Tech")
                         {
                             Global.Base.Test.Log(RelevantCodes.ExtentReports.LogStatus.Pass, "Skill deleted failed");

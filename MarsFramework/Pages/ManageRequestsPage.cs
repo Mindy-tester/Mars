@@ -95,6 +95,7 @@ namespace MarsFramework.Pages
 
             //Actions clickCategory = new Actions(Global.GlobalDefinitions.driver);
             //clickCategory.MoveToElement(Global.GlobalDefinitions.driver.FindElement(By.XPath("//a[@role = 'listitem']//b[text() = 'Writing & Translation']"))).Click().Build().Perform();
+            
             //click on category
             Global.GlobalDefinitions.driver.FindElement(By.XPath("//*[@id='service-search-section']/div[2]/div/section/div/div[1]/div[1]/div/a[4]")).Click();
 
@@ -116,7 +117,8 @@ namespace MarsFramework.Pages
             Global.GlobalDefinitions.driver.FindElement(By.XPath("//button[contains(text(),'Online')]")).Click();
 
             Global.GlobalDefinitions.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
+            
+            //click on chat button
             chatButton.Click();
 
             Global.GlobalDefinitions.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);

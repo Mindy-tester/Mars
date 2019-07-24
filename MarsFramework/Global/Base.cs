@@ -10,11 +10,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 using static MarsFramework.Global.GlobalDefinitions;
 
 namespace MarsFramework.Global
 {
-    class Base
+     public class Base
     {
         #region To access Path from resource file
 
@@ -30,7 +31,8 @@ namespace MarsFramework.Global
         #endregion
 
         #region setup and tear down
-        [SetUp]
+        //[SetUp]
+        [BeforeScenario]
         public void Inititalize()
         {
 
@@ -50,26 +52,28 @@ namespace MarsFramework.Global
 
             #region Initialise Reports
 
-            Extent = new ExtentReports(ReportPath, false, DisplayOrder.NewestFirst);
+            Extent = new ExtentReports(ReportPath, true, DisplayOrder.NewestFirst);
             Extent.LoadConfig(MarsResource.ReportXMLPath);
 
             #endregion
 
-            if (MarsResource.IsLogin == "true")
-            {
-                SignIn loginobj = new SignIn();
-                loginobj.LoginSteps();
-            }
-            else
-            {
-                SignUp obj = new SignUp();
-                obj.register();
-            }
-            
+            //if (MarsResource.IsLogin == "true")
+            //{
+            //    SignIn loginobj = new SignIn();
+            //    loginobj.LoginSteps();
+            //}
+            //else
+            //{
+            //    SignUp obj = new SignUp();
+            //    obj.register();
+            //}
+
         }
 
 
-        [TearDown]
+        // [TearDown]
+
+        [AfterScenario]
         public void TearDown()
         {
             // Screenshot
